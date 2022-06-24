@@ -2,7 +2,7 @@ package com.service.authorise;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import com.service.MyCon;
+import com.service.Myconnection;
 import com.model.EmployeeBean;
 import java.io.IOException;
 import java.sql.*;
@@ -22,9 +22,9 @@ public class Authorise {
     }
 	public static EmployeeBean checkLogin(String username, String password) throws Exception
 	{
-		con=MyCon.getConnection();
+		conn=Myconnection.getConnection();
 		String qry="SELECT * FROM employeetab WHERE mailid = ? AND password = ?";
-		ps=con.prepareStatement(qry);
+		ps=conn.prepareStatement(qry);
 		ps.setString(1, username);
 		ps.setString(2, password);
 		rs=ps.executeQuery();
