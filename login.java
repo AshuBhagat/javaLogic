@@ -147,7 +147,7 @@ public class LoginServlet extends HttpServlet
         		{
         		compareDate=String.valueOf(logToDayDate);
         		 /****************Attendance Finger ScanMachine**************/
-        		//new AttendanceFingerSystemDao().insertAttendanceFingerGetFromMsAccess(); // if have ScanMachine to open line and check also table have Ms-Access entry
+        		//new AttendanceFingerSystDao().insertAttendanceFingerGetFromMsAccess(); // if have ScanMachine to open line and check also table have Ms-Access entry
         		/*********************/
         		
         			if(logEntryb==null)
@@ -203,13 +203,13 @@ public class LoginServlet extends HttpServlet
 		            rd.forward(request, response);
 		        	//response.sendRedirect("index.jsp");
 	        	}
-	        	if(employee.getEmployeeDepartment().equals("demo"))
+	        	if(employee.getEmployeeDepartment().equals("EmployeeHome"))
 	        	{
 	        		HttpSession session = request.getSession(true);
 					session.setAttribute("employeeId", employee.getEmployeeId());
-					session.setAttribute("department", "admin");///*employee.getEmployeeDepartment()*/
+					session.setAttribute("department", "EmployeeHome");///*employee.getEmployeeDepartment()*/
 					session.setAttribute("empSessionFirstLastName", employee.getEmployeeFirstName()+" "+employee.getEmployeeLastName());
-					RequestDispatcher rd=request.getRequestDispatcher("index");
+					RequestDispatcher rd=request.getRequestDispatcher("EmployeeHome");
 		            rd.forward(request, response);
 		        }
 	        }
@@ -228,13 +228,13 @@ public class LoginServlet extends HttpServlet
 						RequestDispatcher rd = request.getRequestDispatcher("index");
 						rd.forward(request, response);
 					}
-					if(employee.getEmployeeDepartment().equals("demo"))
+					if(employee.getEmployeeDepartment().equals("EmployeeHome"))
 		        	{
 		        		HttpSession session = request.getSession(true);
 						session.setAttribute("employeeId", employee.getEmployeeId());
-						session.setAttribute("department", "admin");///*employee.getEmployeeDepartment()*/
+						session.setAttribute("department", "EmployeeHome");///*employee.getEmployeeDepartment()*/
 						session.setAttribute("empSessionFirstLastName", employee.getEmployeeFirstName()+" "+employee.getEmployeeLastName());
-			        	RequestDispatcher rd=request.getRequestDispatcher("index");
+			        	RequestDispatcher rd=request.getRequestDispatcher("EmployeeHome");
 			            rd.forward(request, response);
 			    	}
 				}
@@ -258,13 +258,13 @@ public class LoginServlet extends HttpServlet
 						RequestDispatcher rd = request.getRequestDispatcher("index");
 						rd.forward(request, response);
 					}
-					if(employee.getEmployeeDepartment().equals("demo"))
+					if(employee.getEmployeeDepartment().equals("EmployeeHome"))
 		        	{
 		        		HttpSession session = request.getSession(true);
 						session.setAttribute("employeeId", employee.getEmployeeId());
-						session.setAttribute("department", "admin");///*employee.getEmployeeDepartment()*/
+						session.setAttribute("department", "EmployeeHome");///*employee.getEmployeeDepartment()*/
 						session.setAttribute("empSessionFirstLastName", employee.getEmployeeFirstName()+" "+employee.getEmployeeLastName());
-			        	RequestDispatcher rd=request.getRequestDispatcher("index");
+			        	RequestDispatcher rd=request.getRequestDispatcher("EmployeeHome");
 			            rd.forward(request, response);
 			    	}
 				}
@@ -292,13 +292,13 @@ public class LoginServlet extends HttpServlet
 					RequestDispatcher rd = request.getRequestDispatcher("index");
 					rd.forward(request, response);
 				}
-				if(employee.getEmployeeDepartment().equals("demo"))
+				if(employee.getEmployeeDepartment().equals("EmployeeHome"))
 	        	{
 	        		HttpSession session = request.getSession(true);
 					session.setAttribute("employeeId", employee.getEmployeeId());
-					session.setAttribute("department", "admin");///*employee.getEmployeeDepartment()*/
+					session.setAttribute("department", "EmployeeHome");///*employee.getEmployeeDepartment()*/
 					session.setAttribute("empSessionFirstLastName", employee.getEmployeeFirstName()+" "+employee.getEmployeeLastName());
-		        	RequestDispatcher rd=request.getRequestDispatcher("index");
+		        	RequestDispatcher rd=request.getRequestDispatcher("EmployeeHome");
 		            rd.forward(request, response);
 		    	}
 			}
@@ -329,13 +329,13 @@ public class LoginServlet extends HttpServlet
 						RequestDispatcher rd = request.getRequestDispatcher("index");
 						rd.forward(request, response);
 					}
-					if(employee.getEmployeeDepartment().equals("demo"))
+					if(employee.getEmployeeDepartment().equals("EmployeeHome"))
 		        	{
 		        		HttpSession session = request.getSession(true);
 						session.setAttribute("employeeId", employee.getEmployeeId());
-						session.setAttribute("department", "admin");///*employee.getEmployeeDepartment()*/
+						session.setAttribute("department", "EmployeeHome");///*employee.getEmployeeDepartment()*/
 						session.setAttribute("empSessionFirstLastName", employee.getEmployeeFirstName()+" "+employee.getEmployeeLastName());
-			        	RequestDispatcher rd=request.getRequestDispatcher("index");
+			        	RequestDispatcher rd=request.getRequestDispatcher("EmployeeHome");
 			            rd.forward(request, response);
 			    	}
 				}

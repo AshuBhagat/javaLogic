@@ -51,7 +51,7 @@ public class Authorise {
     }
     public boolean isEmpHome()
     {
-            return session.getAttribute("department").toString().equals("empHome");
+            return session.getAttribute("department").toString().equals("EmployeeHome");
     }
     public void logout() throws IOException {
 
